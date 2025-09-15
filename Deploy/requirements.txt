@@ -1,7 +1,5 @@
-joblib @ file:///C:/b/abs_0ahqdkwgvn/croot/joblib_1754310214981/work
-lightgbm==4.6.0
-pandas @ file:///C:/b/abs_58a1hlvjeo/croot/pandas_1756466410850/work/dist/pandas-2.3.2-cp311-cp311-win_amd64.whl#sha256=1728e1473f9a0b1d06afa0897ce043c8a8c896e44d865d8ca564deaa0f58de58
-pandas-datareader==0.10.0
-scikit-image @ file:///C:/b/abs_10rg9ps1jh/croot/scikit-image_1750419495144/work
-scikit-learn==1.3.2
-scikit-learn-intelex==20230426.121932
+streamlit
+pandas
+numpy
+scikit-learn
+lightgbm
