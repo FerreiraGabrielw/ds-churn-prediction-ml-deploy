@@ -117,7 +117,7 @@ if st.button("Predict Churn"):
 
     # --- 6. Make Predictions ---
     prediction = model.predict(prepared_for_prediction)
-    prediction_proba = model.predict_proba(prepared_for_prediction)[:, 1] # Probability of Churn (class 1)
+    prediction_proba = model.predict_proba(prepared_for_prediction)[:, 1] 
 
     # --- 7. Display Results ---
     st.subheader("Prediction Result:")
@@ -129,8 +129,8 @@ if st.button("Predict Churn"):
     st.write(f"**Churn Probability:** {prediction_proba[0]*100:.2f}%")
 
 # --- Footer with Credits and Links ---
-st.markdown("---") # Optional: A horizontal line for separation
+st.markdown("---") 
 st.markdown("Created and deployed by **Gabriel Ferreira**")
 st.markdown(f"Find me on: "
-            f"[LinkedIn](https://www.linkedin.com/in/gabrielferreira2001/){} | "
-            f"[GitHub](https://github.com/FerreiraGabrielw){}")
+            f"[LinkedIn](https://www.linkedin.com/in/gabrielferreira2001/) | " 
+            f"[GitHub](https://github.com/FerreiraGabrielw/)")
