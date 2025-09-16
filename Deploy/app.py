@@ -2,9 +2,19 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+import os
 
 # --- 1. Load Model and Preprocessing Components ---
 try:
+    # --- Linhas de Debug Temporárias ---
+    st.header("Debug Info:")
+    st.write(f"Current Working Directory: {os.getcwd()}")
+    st.write("Files in Current Directory:")
+    for file in os.listdir('.'):
+        st.write(f"- {file}")
+    st.header("End Debug Info.")
+    # --- Fim Linhas de Debug Temporárias ---
+
     model = joblib.load('lgbm_churn_model.pkl')
     scaler = joblib.load('scaler.pkl')
     model_columns = joblib.load('model_columns.pkl')
@@ -15,10 +25,15 @@ try:
     label_encode_features = joblib.load('label_encode_features.pkl')
     one_hot_encode_features = joblib.load('one_hot_encode_features.pkl')
 
-except FileNotFoundError:
-    st.error("Error: Model or preprocessing files not found. "
-             "Ensure all .pkl files are in the same folder as 'app.py'.")
+except FileNotFoundError as e: # Capture o erro para mostrar qual arquivo falhou
+    st.error(f"ERROR: Model or preprocessing files not found. The system reported: {e}. "
+             "This usually means a file is missing, misnamed, or has incorrect case. "
+             "Ensure all .pkl files are in the same folder as 'app.py' and their names match exactly (case-sensitive) on GitHub.")
     st.stop()
+except Exception as e: # Capture outros erros
+    st.error(f"An unexpected error occurred during file loading: {e}")
+    st.stop()
+
 
 # --- 2. Application Title and Description ---
 st.set_page_config(page_title="Customer Churn Prediction", layout="centered")
