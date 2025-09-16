@@ -17,17 +17,18 @@ try:
 
 except FileNotFoundError:
     st.error("Error: Model or preprocessing files not found. "
-             "Ensure all .pkl files are in the same folder as 'app.py'.")
+             "Ensure all .pkl files are in the 'Deploy/' folder and their names match exactly (case-sensitive) on GitHub. "
+             "If you are running this locally, ensure the 'Deploy/' folder exists in the same directory as app.py.")
     st.stop()
 
 # --- 2. Application Title and Description ---
 st.set_page_config(page_title="Customer Churn Prediction", layout="centered")
-st.title("📈 Customer Churn Prediction")
+st.title("Customer Churn Prediction")
 st.markdown("This application predicts the probability of a customer churning (canceling service) "
             "based on their characteristics.")
 
 # --- 3. How to Use Section ---
-st.header("🔮 Model")
+st.header("Model")
 st.info("""
     - **Algorithm:** Our engine is an optimized LightGBM Classifier, chosen for its balance
       of performance, especially in detecting churners (high Recall) and overall accuracy.
@@ -121,8 +122,15 @@ if st.button("Predict Churn"):
     # --- 7. Display Results ---
     st.subheader("Prediction Result:")
     if prediction[0] == 1:
-        st.error(f"This customer has a high probability of **CHURN**!")
+        st.error(f"This customer has a high probability of **CHURN**! 😥")
     else:
-        st.success(f"This customer will probably **NOT CHURN**.")
+        st.success(f"This customer will probably **NOT CHURN**. 🎉")
 
     st.write(f"**Churn Probability:** {prediction_proba[0]*100:.2f}%")
+
+# --- Footer with Credits and Links ---
+st.markdown("---") # Optional: A horizontal line for separation
+st.markdown("Created and deployed by **Gabriel Ferreira**")
+st.markdown(f"Find me on: "
+            f"[LinkedIn](https://www.linkedin.com/in/gabrielferreira2001/){} | "
+            f"[GitHub](https://github.com/FerreiraGabrielw){}")
