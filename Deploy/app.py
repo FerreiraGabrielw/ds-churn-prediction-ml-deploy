@@ -122,9 +122,9 @@ if st.button("Predict Churn"):
     # --- 7. Display Results ---
     st.subheader("Prediction Result:")
     if prediction[0] == 1:
-        st.error(f"This customer has a high probability of **CHURN**! 😥")
+        st.error(f"This customer has a high probability of **CHURN**!")
     else:
-        st.success(f"This customer will probably **NOT CHURN**. 🎉")
+        st.success(f"This customer will probably **NOT CHURN**")
 
     st.write(f"**Churn Probability:** {prediction_proba[0]*100:.2f}%")
 
