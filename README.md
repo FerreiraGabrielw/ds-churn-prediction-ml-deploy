@@ -1,6 +1,6 @@
 # Customer Churn Analysis and Prediction  
 
-![Analysis Preview](quarto/capa.png)  
+![Analysis Preview](Quarto/capa.png)  
 
 ### ➡️ Full and Detailed Analysis in My Portfolio:  
 [Access the full project page here](https://ferreiragabrielw.github.io/portfolio-gabriel/projetos/DataScience/2CustomerChurn/CustomerChurn.html)  
