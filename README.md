@@ -5,15 +5,6 @@
 ### ➡️ Full and Detailed Analysis in My Portfolio:  
 [Access the full project page here](https://ferreiragabrielw.github.io/portfolio-gabriel/projetos/DataScience/2CustomerChurn/CustomerChurn.html)  
 
-
-<p align="center">
-  <a href="https://ds-churn-prediction-ml-deploy-qp3znuqfw4fpwqcv8li3n2.streamlit.app/" target="_blank">
-    🚀 Try the Live App
-  </a>
-</p>
-
-
-
 ### 🚀 Deployed:  
 [Try the live app here](https://ds-churn-prediction-ml-deploy-qp3znuqfw4fpwqcv8li3n2.streamlit.app/)  
 
@@ -33,26 +24,12 @@ The main objective is twofold:
 
 * Tools: Python (Pandas, Scikit-learn, LightGBM, XGBoost, Matplotlib, Seaborn), Quarto, Jupyter Notebook, Streamlit.  
 * End-to-End Analysis Pipeline (E2E):  
-    * Data Cleaning & Preparation:  
-        - Handled missing values in `TotalCharges` (imputed with 0 for new customers).  
-        - Standardized categories (`No internet/phone service` → `No`).  
-        - Dropped irrelevant column (`customerID`).  
+    * Data Cleaning & Preparation:    
     * Exploratory Data Analysis (EDA):  
-        - Churn rate: ~27% of customers left.  
-        - High early churn within the first 9 months of tenure.  
-        - Higher churn among customers with month-to-month contracts, paperless billing, and electronic check payments.  
     * Feature Engineering & Encoding:  
-        - Label Encoding for binary variables.  
-        - One-Hot Encoding for categorical features.  
-        - Removed `TotalCharges` due to strong multicollinearity with `tenure` and `MonthlyCharges`.  
     * Class Imbalance Handling:  
-        - Tested class_weight balancing and SMOTETomek resampling.  
     * Modeling & Evaluation:  
-        - Tested multiple ML algorithms: Logistic Regression, Random Forest, Decision Tree, SVM, KNN, XGBoost, LightGBM.  
-        - Evaluated with Recall as the main metric (to maximize detection of churners), plus Precision, F1-Score, and AUC-ROC.  
     * Hyperparameter Optimization:  
-        - GridSearchCV for Logistic Regression, Random Forest, SVM, XGBoost, LightGBM.  
-        - Tuned models consistently improved Recall and AUC-ROC.  
 
 * Key Insights (Business Perspective):  
     * High churn risk is associated with:  
@@ -70,9 +47,10 @@ The main objective is twofold:
 
 ## Repository Content  
 
-* `data/`: Contains the raw dataset (`Telco-Customer-Churn.csv`).  
-* `notebooks/`: Includes the full analysis Jupyter Notebook (`.ipynb`) with all steps (EDA, preprocessing, modeling, interpretation).  
-* `quarto/`: Includes the `.qmd` source file of the report and its rendered HTML version.  
+* `Data/`: Contains the raw dataset (`dataset-churn.csv`).  
+* `Notebooks/`: Includes the full analysis Jupyter Notebook (`.ipynb`) with all steps (EDA, preprocessing, modeling, interpretation).  
+* `Quarto/`: Includes the `.qmd` source file of the report and its rendered HTML version.
+* `Deploy/`: Includes the `app.py` source file of the live app and all the pkl files used. 
 * `README.md`: This document.  
 * `LICENSE`: Project license (MIT License).  
 
