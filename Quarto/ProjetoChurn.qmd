@@ -8,7 +8,7 @@ format:
     code-fold: true
     code-summary: "Show Code"
     toc: true
-    toc-depth: 2
+    toc-depth: 1
     anchor-sections: false
 engine: jupytern
 jupyter: python3
@@ -944,7 +944,7 @@ plt.show()
 The optimized versions with scale_pos_weight consistently outperform their SMOTETomek-based counterparts in AUC, Recall, and F1-Score.
 The conclusion is that, for this problem and dataset, using class_weight and scale_pos_weight in conjunction with hyperparameter optimization was the most effective strategy for achieving high Recall and AUC, surpassing the resampling approach with SMOTETomek.
 
-### Analysis and Comparison of Model Performance Metrics 
+# Comparison of Model Performance Metrics 
 
 ###### Results Consolidation:
 ```{python}
@@ -1001,7 +1001,7 @@ for metrica, titulo in metricas.items():
         .tolist()
     )
     
-    plt.figure(figsize=(12, 7))
+    plt.figure(figsize=(8, 5))
     sns.barplot(
         x="Model", y=metrica, hue="Status", 
         data=df_filtered, palette="Set2", order=ordem
@@ -1024,7 +1024,7 @@ labels = metrics
 num_vars = len(labels)
 angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
 angles += angles[:1]
-plt.figure(figsize=(8, 5))
+plt.figure(figsize=(10, 6))
 ax = plt.subplot(111, polar=True)
 for idx, row in df_norm.iterrows():
     values = row.tolist()
@@ -1127,7 +1127,7 @@ The Optimized LightGBM, using its default cutoff point of 0.50, offers the best 
 joblib.dump(best_lgbm_model, "best_lgbm_model.pkl")
 ```
 
-## Feature Importance
+# Feature Importance
 
 Feature Importance Analysis seeks to quantify the contribution of each variable (feature) in our dataset to the model's predictions. In other words, it helps us understand which customer characteristics have the greatest impact on the probability of churn, revealing the "triggers" and "protectors" behind this behavior.
 
@@ -1301,7 +1301,7 @@ rank_df.head(15)
 ```
 
 
-### Recommendations and Business Actions Based on Insights:
+# Recommendations and Business Actions Based on Insights:
 
 * Contract Type – Two-Year Contracts (Contract_Two year): Customers with two-year contracts show a significantly lower risk of churn. Encourage migration to this type of contract through offers and benefits.
 
