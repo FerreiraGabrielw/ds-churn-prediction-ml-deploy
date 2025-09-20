@@ -3,7 +3,7 @@
 ![Analysis Preview](Quarto/capa.png)  
 
 ### ➡️ Full and Detailed Analysis in My Portfolio:  
-[Access the full project page here](https://ferreiragabrielw.github.io/portfolio-gabriel/projetos/DataScience/2CustomerChurn/CustomerChurn.html)  
+[Access the full project page here]([https://ferreiragabrielw.github.io/portfolio-gabriel/projetos/DataScience/2CustomerChurn/CustomerChurn.html](https://ferreiragabrielw.github.io/portfolio-gabriel/projetos/DataScience/2ChurnPrediction/ProjetoChurn.html))  
 
 ### 🚀 Deployed:  
 [Try the live app here](https://ds-churn-prediction-ml-deploy-qp3znuqfw4fpwqcv8li3n2.streamlit.app/)  
