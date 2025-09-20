@@ -1,7 +1,7 @@
 ---
 title: "Customer Churn Analysis and Prediction"
 author: "Gabriel Ferreira"
-date: "2025-16-00"
+date: "2025-09-16"
 format:
   html:
     page-layout: full
@@ -9,6 +9,7 @@ format:
     code-summary: "Show Code"
     toc: true
     toc-depth: 1
+    toc-title: "Project Index"
     anchor-sections: false
 engine: jupytern
 jupyter: python3
@@ -1301,7 +1302,7 @@ rank_df.head(15)
 ```
 
 
-# Recommendations and Business Actions Based on Insights:
+# Recommendations and Business Actions
 
 * Contract Type – Two-Year Contracts (Contract_Two year): Customers with two-year contracts show a significantly lower risk of churn. Encourage migration to this type of contract through offers and benefits.
 
@@ -1325,6 +1326,16 @@ rank_df.head(15)
 Check this model in production by running churn predictions:
 
 <a href="https://ds-churn-prediction-ml-deploy-qp3znuqfw4fpwqcv8li3n2.streamlit.app/" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  Click here to access
+</a>
+
+## Github repository
+
+Get acess to all codes and files:
+
+<a href="https://github.com/FerreiraGabrielw/ds-churn-prediction-ml-deploy" 
    target="_blank" 
    rel="noopener noreferrer">
   Click here to access
